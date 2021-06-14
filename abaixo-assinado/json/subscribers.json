@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Felipe Santos",
+    "nick": "Proto",
+    "message": "Educai as crianças e não será preciso punir os homens",
+    "from": "São Gonçalo",
+    "course": "Sistemas de Computação",
+    "admissionDate": "2009/1",
+    "registrationId": "123456",
+    "password": "xpto123",
+    "createdAt": "2021-06-13T18:52:40.467Z",
+    "lastUpdated": "2021-06-13T18:52:40.467Z",
+    "updateCredits": 5
+  }
+]

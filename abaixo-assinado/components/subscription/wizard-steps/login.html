@@ -1,0 +1,34 @@
+<div id="step-1">
+    <h4>Participação no Abaixo-Assinado</h4>
+    <form @submit.prevent="formSubmit()"><!--container 3 + dados ajax-->
+        <fieldset class="container">
+            <legend>Validação</legend>
+            <p class="text">Utilize seu login da plataforma para a verificação de atividade acadêmica</p>
+            <div class="form-field">
+                <div class="field">
+                    <label class="label" for="mat">Matrícula:</label>
+                    <input class="input" type="text" id="mat" name="mat" class="required" autocomplete="off"
+                           maxlength="15" v-model="user"/>
+                    <p class="input-feedback"></p>
+                </div>
+            </div>
+            <div class="form-field">
+                <div class="field">
+                    <label class="label" for="pass">Senha:</label>
+                    <input class="input" :type="passwordFieldType" id="pass" name="pass" class="required" v-model="pass"/>
+                    <p class="input-feedback"></p>
+                </div>
+                <div class="composite">
+                    <input class="input" id="show-pass" type="checkbox" @change="switchVisibility()"/>
+                    <label class="label" for="show-pass">Mostrar senha</label>
+                </div>
+            </div>
+            <p class="text">
+                <a id="lnkpriv" href="#privacidade" title="Veja abaixo sobre a privacidade">
+                    Leia sobre a privacidade antes de verificar
+                </a>
+            </p>
+            <button type="submit">Verificar</button>
+        </fieldset>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="wizard-trigger">
+    <h2>
+        <a @click="start()" :class="{h2Dis: isStarted()}" title="Abrir formulário de participação">
+            Sou aluno e quero me manifestar!
+        </a>
+    </h2>
+</div>
+<button class="abort" @click="abort" v-if="isActive()" title="Abortar">
+    <img class="icon" src="images/close.png"alt="Abortar"/>
+</button>
+<step-login v-if="isStarted()" :subscribers="subscribers" @selectedSubscriber="onEdit" @newSubscriber="onNew"></step-login>
+<step-incluir v-if="isCreating()" :subscriber="subscriber" @createSubscriber="onCreate"></step-incluir>
+<step-editar v-if="isUpdating()" :subscriber="subscriber"  @updatedSubscriber="onUpdate"></step-editar>
+<step-logout v-if="isFinished()" :subscriber="subscriber" @logout="abort"></step-logout>

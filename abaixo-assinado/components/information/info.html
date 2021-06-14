@@ -1,0 +1,220 @@
+<div id="info">
+    <ul><!--container 1-->
+        <li><a @click="show('privacidade')" v-bind:class="{act: isFragment('privacidade')}"
+               title="Exibir dados sobre a privacidade">Privacidade</a></li>
+        <li><a @click="show('manifesto')" v-bind:class="{act: isFragment('manifesto')}"
+               title="Conheça sobre o Manifesto">O Manifesto</a></li>
+        <li><a @click="show('sistema')" v-bind:class="{act: isFragment('sistema')}"
+               title="Exibir detalhes sobre o sistema">Sobre o sistema</a></li>
+        <li><a @click="show('dicas')" v-bind:class="{act: isFragment('dicas')}" title="Exibir dicas úteis">Dicas
+            úteis</a></li>
+        <li><a @click="show('agradecimentos')" v-bind:class="{act: isFragment('agradecimentos')}"
+               title="Agradecimentos aos colaboradores">Agradecimentos</a></li>
+        <li><a @click="show('tutores')" v-bind:class="{act: isFragment('tutores')}"
+               title="Tutores que estão apoiando o manifesto">Apoio dos Tutores</a></li>
+        <li><a @click="show('texto')" v-bind:class="{act: isFragment('texto')}"
+               title="Texto do Abaixo-assinado">Texto do Manifesto</a></li>
+        <li><a @click="show('noticias')" v-bind:class="{act: isFragment('noticias')}"
+               title="Últimas notícias">Notícias</a></li>
+        <li><a @click="show('organizadores')" v-bind:class="{act: isFragment('organizadores')}"
+               title="Organizadores do Manifesto">Organizadores</a></li>
+    </ul>
+    <div id="box"><!--container 2-->
+        <div v-if="isFragment('privacidade')">
+            <h4>Privacidade</h4>
+            <p>O sistema de abaixo-assinado utiliza o login para atestar se a pessoa é
+                <span>realmente aluno</span> do CEDERJ. Este é o critério que utilizamos para ter a absoluta
+                certeza que <span>100%</span> das assinaturas são de alunos.</p>
+            <p>Armazena os seguintes dados:</p>
+            <ul>
+                <li>Nome completo</li>
+                <li>Matrícula</li>
+                <li>Curso</li>
+                <li>Pólo</li>
+                <li>Perfil(Aluno/tutor)</li>
+                <li>Código - hash MD5(matrícula+senha+palavra_passe), <a href="files/forte_codigounico.txt">algoritmo</a>.
+                    MD5 não há retorno.
+                </li>
+                <li>Data de adesão</li>
+                <li>Frase</li>
+            </ul>
+            <p>Os dados permanecerão guardados até o término do processo. Após, serão destruídos!</p>
+            <p><span>Não há acesso ao banco de dados do CEDERJ</span>, mas sim, acesso a plataforma via
+                extensão <span>cURL</span> do <span>PHP</span>. Essa extensão é similar a um navegador e
+                assim é realizado a validação, direto via HTTP.</p>
+            <p>Quando o aluno acessa a plataforma via sistema de abaixo-assinado, é checado sua id de
+                usuário. Essa id gera o link do <span>perfil público</span>, para sincronizar a matrícula, o
+                nome, o curso, o pólo e o perfil(aluno).</p>
+            <p>O perfil privado <span>não é acessado</span>. A senha <span>não é armazenada</span>. É gerado
+                um código <span>único</span> aleatório de 32 caracteres, garantindo mais segurança ao
+                manifestante.</p>
+            <p>Não utilizamos cookies. A sessão expira em <span>5 minutos</span>. A frase poderá ser
+                <span>editada 3 vezes</span>
+                para corrigir possíveis erros de digitação.</p>
+            <p>Para maiores informações, por favor, acesse: <span><a
+                    href="http://www.compcederj.com.br/forum/viewtopic.php?f=45&amp;t=144&amp;sid=e741e0450cb2f1712359576164b254c0"
+                    title="Fórum do projeto no CompCEDERJ">Sistema de abaixo-assinado</a></span></p>
+            <p>O <span>código</span> do sistema está disponível para download aqui: <span><a
+                    href="http://www.compcederj.com.br/forum/viewtopic.php?f=45&amp;t=150&amp;sid=1fd15daeb05e690b6a947037ec4f4632"
+                    title="Auditoria e análise">Auditoria e análise</a></span></p>
+        </div>
+        <div v-if="isFragment('manifesto')">
+            <h4>O Manifesto e seu propósito</h4>
+            <p>O manifesto contra o fim das tutorias presenciais surgiu com o tópico da aluna Queila, de
+                computação do Pólo de Itaperuna, no fórum do CompCEDERJ.</p>
+            <p>A aluna recebeu um email do coordenador Leandro com as seguintes novas regras:</p>
+            <ul>
+                <li>Turma com até 10 alunos - sem tutor presencial</li>
+                <li>Turma com mais de 10 alunos - com 1 ou 2 horas dependendo da disciplina (se é ou não
+                    considerada difícil)
+                </li>
+                <li>O tutor terá pelo menos 2 horas (mesmo que tenha apenas 1 disciplina com menos de 10
+                    alunos)
+                </li>
+            </ul>
+            <p>Queila, indignada, deu o pontapé inicial para a realização do abaixo-assinado contra a
+                atitude do CEDERJ em relação as tutorias.</p>
+            <p>Depois de muita discussão, atingimos um consenso e assim o manifesto foi possível ser
+                criado.</p>
+            <p>O propósito do manifesto é <span>exibir nossa indignação diante a alteração dos critérios de disponibilidade das tutorias presenciais</span>
+                e <span>cobrar melhorias</span>, para que possamos ter <span>mais qualidade de ensino sem desperdício de recursos públicos</span>.
+            </p>
+            <p><span>Defendemos a evolução da tutoria presencial</span>, para que seja mais robusta, mais
+                convidativa para os alunos, e traga benefícios práticos para o nosso aprendizado. Defendemos
+                que a tutoria seja <span>repensada para afastar</span>, de uma vez por todas, o <span>fantasma do corte</span>
+                pela <span>escassez de alunos</span>.</p>
+            <p>Defendemos o <span>futuro do ensino semipresencial</span>.</p>
+            <p><span>Neste momento</span>, estamos exibindo nossa <span>indignação</span> diante a alteração
+                dos critérios de disponibilidade das tutorias.</p>
+            <p><span>Para o futuro</span>, esperamos ser mais <span>efetivos na contribuição</span>.</p>
+            <p>Tópico da Queila no CompCEDERJ: <a
+                    href="http://www.compcederj.com.br/forum/viewtopic.php?f=40&amp;t=100&amp;sid=d9891493d9a2e73af49a7d302d86efd0">Nova
+                Regra do CEDERJ e Sugestão para solução do caso</a></p>
+        </div>
+        <div v-if="isFragment('sistema')">
+            <h4>Sobre o sistema de abaixo-assinado</h4>
+            <p>Nosso sistema de abaixo-assinado é construído com tecnologias para web atuais como o ajax e o
+                json. Com isso, temos um bom ganho de performance na transferência de dados.</p>
+            <p>Possui 2 partes de processamento de dados envolvidos: <span>no cliente e no servidor</span>
+            </p>
+            <p>No servidor temos o PHP processando somente os dados, sem qualquer manipulação de tag html. É
+                o processamento mais pesado:</p>
+            <ul>
+                <li>acesso ao banco de dados</li>
+                <li>roteamento de requisições</li>
+                <li>proteção de acesso</li>
+                <li>validação de campos</li>
+                <li>envio de email</li>
+                <li>retorno de html ao cliente</li>
+                <li>paginação</li>
+            </ul>
+            <p>No cliente temos o Javascript com o framework jQuery. O Javascript processa:</p>
+            <ul>
+                <li>executa ajax</li>
+                <li>requisições de dados e html para o servidor</li>
+                <li>processa dados json, tanto de envio quanto de recebimento</li>
+                <li>gerencia os efeitos</li>
+                <li>executa a validação e controle de campos de formulário</li>
+            </ul>
+            <p>O sistema utiliza as seguintes tecnologias: <span>xhtml, css, js-jquery, php | xhtml e css3 válidos</span>
+            </p>
+            <p>Em caso de problemas ou dúvidas, contato via: <span>Fórum: <a
+                    href="http://www.compcederj.com.br/forum/viewtopic.php?f=45&amp;t=144&amp;sid=e741e0450cb2f1712359576164b254c0"
+                    title="CompCEDERJ - Sistema de abaixo-assinado">CompCEDERJ - Sistema de abaixo-assinado</a></span>
+            </p>
+            <p>Email para o desenvolvedor: <span>live.proto@hotmail.com</span></p>
+        </div>
+        <div v-if="isFragment('dicas')">
+            <h4>Dicas úteis</h4>
+            <p>Errou ao escrever a frase?<br/><span>A frase poderá ser editada efetuando o relogin.</span>
+            </p>
+            <p>Desvincular senha da plataforma do código único?<br/><span>Realize o procedimento normal da validação. Após inscrito, altere a senha na plataforma mas acesse o sistema com a senha antiga, diferente da plataforma.</span>
+            </p>
+            <p>Independe de aderir ao manifesto, troque suas senhas periodicamente, não clique em links para
+                sites duvidosos e não exponha seus dados abertamente na rede. Mantenha o antivírus
+                atualizado, acesse locais confiáveis com informações claras a respeito de quais informações
+                são armazenadas pelo site.</p>
+        </div>
+        <div v-if="isFragment('agradecimentos')">
+            <h4>Agradecimento aos amigos que ajudaram no projeto</h4>
+            <p>Se expressa aqui a <span>gratidão a todos</span> que ajudaram de forma direta e indireta
+                neste projeto do sistema de abaixo assinado, todos que mantiveram o
+                <span>pensamento positivo e acreditaram</span>
+                na realização deste manifesto.</p>
+            <p>Alguns colaboradores:</p>
+            <ul>
+                <li>Gustavo/Três Rios - SQL</li>
+                <li>Antonio/Barra do Piraí - Infraestrutura do CompCEDERJ</li>
+                <li>Ferrugem/Volta Redonda - Precursor</li>
+                <li>Queila/Itaperuna - Iniciativa principal</li>
+                <li>Sandrolor/Nova Iguaçu - Questionamentos</li>
+                <li>Taty/São Gonçalo - Cobrança de cronograma</li>
+                <li>William_Dom/Caxias - Incentivo</li>
+                <li>Nilton/Saquarema - Somando a Causa</li>
+                <li>DCETRI Robson/Três Rios - Preocupação e cobrança</li>
+            </ul>
+        </div>
+        <div v-if="isFragment('tutores')">
+            <h4>Todos os tutores que apoiam este manifesto</h4>
+            <ul>
+                <li>tutor - disciplina - curso - polo - link perfil na plataforma(opcional)</li>
+            </ul>
+        </div>
+        <div v-if="isFragment('texto')">
+            <h4>Formato de texto do abaixo-assinado</h4>
+            <p>Aos Senhores da Diretoria Acadêmica,</p>
+            <p>Os abaixo-assinados, brasileiros, residentes e domiciliados no Estado do Rio de Janeiro e
+                demais Estados da Federação, alunos do Consórcio CEDERJ, solicitam de V.Sª, a Não redução da
+                carga horária e a reformulação na aplicação das tutorias presenciais, a fim de dar melhor
+                suporte aos discentes para auxiliá-los no processo de aprendizado, tornando-a mais robusta e
+                atraente para o aluno, e evitar uma iminente evasão de tutores.</p>
+            <p>Consideramos as tutorias presenciais cruciais para uma plena absorção do conteúdo oferecido.
+                Defendemos a evolução das tutorias presenciais e não a sua redução.</p>
+            <p>Na certeza de sermos atendidos, encaminhamos esse documento em folhas numeradas e assinadas
+                pelos discentes.</p>
+        </div>
+        <div v-if="isFragment('noticias')">
+            <h4>Últimas notícias</h4>
+            <ul>
+                <li>16/11/2010 - Iniciamos o processo de conclusão do abaixo assinado para ser enviado ao
+                    CEDERJ
+                </li>
+                <li>13/11/2010 - Tivemos nosso acesso a plataforma bloqueado pelo CEDERJ</li>
+                <li>12/11/2010 - Folders/cartazes atualizados de acordo com as novas informações</li>
+                <li>11/11/2010 - Modificação no texto atribuído ao CEDERJ devido ao PRIMEIRO pronunciamento
+                    oficial da instituição aos alunos sobre a polêmica das tutorias presenciais
+                </li>
+                <li>26/10/2010 20:43:28 - Chegamos a 100 assinaturas</li>
+                <li>25/10/2010 - Pedagogia-Licenciatura e Administração Pública, adesão corrigida</li>
+                <li>24/10/2010 - Iniciamos</li>
+            </ul>
+        </div>
+        <div v-if="isFragment('organizadores')">
+            <h4>Organizadores do manifesto</h4>
+            <ul>
+                <li>Infraestrutura: <a
+                        href="http://novaplataforma.cederj.edu.br/plataforma2009/ctrlperfil?op=6&codUsuario=31812"
+                        title="perfil na Plataforma">Antonio</a> - Barra do Piraí
+                </li>
+                <li>Desenvolvimento e divulgação: <a
+                        href="http://novaplataforma.cederj.edu.br/plataforma2009/ctrlperfil?op=6&codUsuario=3365"
+                        title="perfil na Plataforma">Felipe Ferrugem</a> - Volta Redonda
+                </li>
+                <li>Desenvolvimento e divulgação: <a
+                        href="http://novaplataforma.cederj.edu.br/plataforma2009/ctrlperfil?op=6&codUsuario=32444"
+                        title="perfil na Plataforma">Queila</a> - Itaperuna
+                </li>
+                <li>Correção de textos: <a
+                        href="http://novaplataforma.cederj.edu.br/plataforma2009/ctrlperfil?op=6&codUsuario=38721"
+                        title="perfil na Plataforma">Sandro</a> - Nova Iguaçu
+                </li>
+                <li>Desenvolvimento, programação e estratégias: <a
+                        href="http://novaplataforma.cederj.edu.br/plataforma2009/ctrlperfil?op=6&codUsuario=39056"
+                        title="perfil na Plataforma">Felipe Ralph</a> - São Gonçalo
+                </li>
+                <li>Estamos aguardando mais gente para entrar nesta lista</li>
+            </ul>
+        </div>
+    </div>
+    <hr/>
+</div>

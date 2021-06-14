@@ -1,0 +1,64 @@
+<div id="conf">
+    <h4>Participação no Abaixo-Assinado</h4>
+    <form @submit.prevent="formSubmit()">
+        <fieldset>
+            <legend>Confirmação</legend>
+            <p class="text">Dados recuperados na verificação de atividade acadêmica</p>
+            <dl>
+                <dt>Matrícula:</dt>
+                <dd id="pmat">{{subscriber.registrationId}}</dd>
+            </dl>
+            <div class="form-field">
+                <div class="field">
+                    <label class="label" for="name">Nome:</label>
+                    <input class="input" type="text" id="name" name="name" class="required" maxlength="140"
+                           v-model="subscriber.name"/>
+                    <p class="input-feedback">140 Caracteres</p>
+                </div>
+            </div>
+            <div class="form-field">
+                <div class="field">
+                    <label class="label" for="nick">Apelido:</label>
+                    <input class="input" type="text" id="nick" name="nick" class="required" maxlength="140"
+                           v-model="subscriber.nick"/>
+                    <p class="input-feedback">140 Caracteres</p>
+                </div>
+            </div>
+            <div class="form-field">
+                <div class="field">
+                    <label class="label" for="course">Curso:</label>
+                    <select class="input" id="course" name="course" class="required" v-model="subscriber.course">
+                        <option disabled value="">Escolha um item</option>
+                        <option v-for="course in courses" v-bind:value="course">{{course}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-field">
+                <div class="field">
+                    <label class="label" for="admissionDate">Periodo de entrada:</label>
+                    <select class="input" id="admissionDate" name="admissionDate" class="required" v-model="subscriber.admissionDate">
+                        <option v-for="admissionDate in admissionDates" v-bind:value="admissionDate" v-bind:selected="index == 0">{{admissionDate}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-field">
+                <div class="field">
+                    <label class="label" for="from">Pólo:</label>
+                    <select class="input" id="from" name="from" class="required" v-model="subscriber.from">
+                        <option disabled value="">Escolha um item</option>
+                        <option v-for="center in centers" v-bind:value="center.name">{{center.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-field">
+                <div class="field">
+                    <label class="label" for="phrase">Sua Frase de Manifesto:</label>
+                    <input class="input" type="text" id="phrase" name="phrase" class="required" autocomplete="off"
+                           maxlength="140" v-model="subscriber.message"/>
+                    <p class="input-feedback">140 Caracteres</p>
+                </div>
+            </div>
+            <button type="submit">Confirmar Participação</button>
+        </fieldset>
+    </form>
+</div>

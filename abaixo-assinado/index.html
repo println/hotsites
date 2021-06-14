@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="classification" content="Education"/>
+    <meta name="description"
+          content="Abaixo-assinado contra o fim das tutorias presenciais dos cursos de graduação do CEDERJ."/>
+    <meta name="robots" content="NOINDEX"/>
+    <meta name="rating" content="General"/>
+    <meta name="author" content="Proto"/>
+    <meta name="language" content="PT-Br"/>
+    <title>Manifesto - Cederj</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link href="css/default.css" title="Default" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/effects.css" title="Default" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="css/app.css" title="Default" type="text/css" rel="stylesheet" media="screen"/>
+    <script src="js/lib/axios.min.js"></script>
+    <script src="js/lib/vue.global.prod.js"></script>
+    <script src="js/lib/vue3-sfc-loader.js"></script>
+</head>
+<body>
+<div id="app">
+    <div id="citation">
+        <p>
+            <q>{{citation.phrase}}</q>
+            <cite>{{citation.author}}</cite>
+        </p>
+    </div>
+    <div id="main">
+        <h1>Manifesto contra o fim das tutorias presenciais</h1>
+    </div>
+    <div id="content">
+        <div class="wrapper">
+            <div id="swapcontent">
+                <subscription-wizard v-bind:subscribers="subscribers"></subscription-wizard>
+            </div>
+            <section id="subscriptions">
+                <div id="status">
+                    <h3><span>{{ subscribers.length }}</span>Assinaturas</h3>
+                </div>
+                <subscribers-manifest v-bind:subscribers="subscribers" ></subscribers-manifest>
+            </section>
+            <div id="utilities">
+                <h3>Utilidades</h3>
+                <info></info>
+                <div id="divul">
+                    <div id="mail">
+                        <h4>Ajude-nos a divulgar - email</h4>
+                        <p>
+                            Envie um email para um colega de classe e colabore com essa iniciativa.<br/>
+                            É possivel a participação de alunos de qualquer curso do CEDERJ.
+                        </p>
+                        <form method="post" action="mailer">
+                            <fieldset>
+                                <input type="text" name="mail" class="empty required"/>
+                                <button>Enviar</button>
+                            </fieldset>
+                        </form>
+                    </div><!--container 3 + dados ajax-->
+                    <div id="folder">
+                        <h4>Cartaz nos Pólos</h4>
+                        <p>Faça download do cartaz para colar no pólo. Color ou P&amp;B</p>
+                        <a href="files/folder.cl.pdf" title="Cartaz Colorido">
+                            <img src="images/folder.cl.png" alt="Colorido"/>
+                        </a>
+                        <a href="files/folder.pb.pdf" title="Cartaz Preto e Branco">
+                            <img src="images/folder.pb.png" alt="Preto e Branco"/>
+                        </a>
+                    </div><!--container 3 + dados ajax-->
+
+                    <div id="social">
+                        <h4>Orkut/Msn/Twitter/Facebook</h4>
+                        <p>Divulgue o manifesto entre os alunos do CEDERJ que estão em sua rede social.</p>
+                        <p>Ajude a divulgar o manifesto!</p>
+                        <p>Repasse esta mensagem!</p>
+                        <p><span>http://abaixoassinado.compcederj.com.br/</span></p>
+                    </div><!--container 3 + dados ajax-->
+                </div>
+            </div>
+            <div id="footer"><!--analizar sematica do bloco-->
+                <a href="http://www.compcederj.com.br/" title="Conheça o CompCederj">CompCEDERJ</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/app.vue.js"></script>
+</body>
+</html>

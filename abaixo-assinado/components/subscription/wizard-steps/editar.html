@@ -1,0 +1,39 @@
+<div id="conf">
+	<h4>Você já está participando do Abaixo-Assinado</h4>
+	<form @submit.prevent="formSubmit()"><!--container 3 + dados ajax-->
+		<fieldset>
+			<legend>Perfil</legend>
+			<p class="text">Estes são seus dados armazenados no banco (navegador)</p>
+			<dl>
+				<dt>Aluno:</dt>
+				<dd id="pnome">{{subscriber.name}}</dd>
+				<dt>Apelido:</dt>
+				<dd id="papelido">{{subscriber.nick}}</dd>
+				<dt>Matrícula:</dt>
+				<dd id="pmat">{{subscriber.registrationId}}</dd>
+				<dt>Período:</dt>
+				<dd id="pperiodo">{{subscriber.admissionDate}}</dd>
+				<dt>Pólo:</dt>
+				<dd id="ppolo">{{subscriber.from}}</dd>
+				<dt>Curso:</dt>
+				<dd id="pcurso">{{subscriber.course}}</dd>
+				<dt>Data Adesão:</dt>
+				<dd id="padesao">{{subscriber.createdAt}}</dd>
+				<dt>Data última atualização:</dt>
+				<dd id="plupdate">{{subscriber.lastUpdated}}</dd>
+				<dt>Alterações restantes:</dt>
+				<dd id="pupdates">{{subscriber.updateCredits}}</dd>
+			</dl>
+			<p class="text"><q id="pfrase">{{subscriber.message}}</q></p>
+			<div class="form-field">
+			<div class="field">
+				<label class="label" for="phrase">Editar Frase de Manifesto:</label>
+				<input class="input" type="text" id="phrase" name="ephrase" autocomplete="off" maxlength="140" v-model="subscriber.message"/>
+				<p class="input-feedback">140 Caracteres</p>
+			</div>
+			</div>
+			<p class="text">Caso o campo frase esteja vázio, o valor de <b>Alterações restantes</b> não será modificado</p>
+			<button>Confirmar Edição</button>
+		</fieldset>
+	</form>
+</div>

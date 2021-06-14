@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Bad Design</title>
+		<link href="css/reset.css" media="screen" type="text/css" rel="stylesheet" />
+		<link href="css/default.css" media="screen" type="text/css" rel="stylesheet" />
+		<link href="css/lobster_1.4.css" media="screen" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="script/jquery.js" defer="defer"> </script>
+		<script type="text/javascript" src="script/default.js" defer="defer"> </script>
+	</head>
+	<body>
+		<header>
+			<h1>Design ruim?</h1>
+		</header>
+		<div>
+			<nav>
+				<ul>
+					<li>
+						<a href="#13" class="active"> #13 <small>Aplicativo ou vírus?</small> </a>
+					</li>
+					<li>
+						<a href="#14"> #14 <small>Compilando no eclipse...</small> </a>
+					</li>
+					<li>
+						<a href="#15"> #15 <small>Web standards e o ie</small> </a>
+					</li>
+					<li>
+						<a href="#16"> #16 <small>Retornar ao ponto...</small> </a>
+					</li>
+				</ul>
+			</nav>
+			<section>
+				<article class="active" id="13b">
+					<header>
+						<h2>Aplicativo ou vírus?</h2>
+						<h3>Coisas difíceis de perceber</h3>
+					</header>
+					<section>
+						<h4>Design atual</h4>
+						<img alt="#13" src="images/13.png" />
+					</section>
+
+					<section>
+						<h4>Problema</h4>
+						<p>
+							Ícones são implementados em computação para informar rapidamente ao usuário sobre uma determinada funcionalidade de uma aplicação. Atualmente os ícones podem ser adicionados arbitrariamente em um programa executável. O grande problema é quando são utilizados para induzir o usuário a realizar uma ação insegura.
+						</p>
+					</section>
+					<section>
+						<h4>Possível solução</h4>
+						<p>
+							Uma possível solução é o sistema operacional ou o antivírus informar ao usuário sobre possíveis problemas na execução da aplicação, evitando assim o usuário utilizar a aplicação duvidosa para saber de seus efeitos.
+						</p>
+					</section>
+					<section>
+						<h4>Design final</h4>
+						<img alt="#13 fix" src="images/13.fix.png" />
+					</section>
+				</article>
+				<article id="14b"> 
+					<header>
+						<h2>Compilando no eclipse pela primeira vez</h2>
+						<h3>Controles com símbolos ambíguos</h3>
+					</header>
+					<section>
+						<h4>Design atual</h4>
+						<img alt="#14" src="images/14.png" />
+					</section>
+
+					<section>
+						<h4>Problema</h4>
+						<p>
+							Um usuário acostumado a usar interface gráfica em todas as suas ferramentas e inexperiente no eclipse sentirá dificuldades para interpretar o símbolo de “Run Web Test” e “External tools”. Tal confusão é ocasionada por os 2 botões terem uma simbologia e cores parecidas, sendo o “External tools” um pouco menor e adicionado de um desenho de uma maleta.
+						</p>
+					</section>
+					<section>
+						<h4>Possível solução</h4>
+						<p>
+							Para solucionar este problema, a sugestão é a modificação do ícone para algo que lembre uma ferramenta externa de forma mais clara ou troque a cor do ícone.
+						</p>
+					</section>
+					<section>
+						<h4>Design final</h4>
+						<img alt="#14 fix" src="images/14.fix.png" />
+					</section>
+				</article>
+				<article id="15b">
+					<header>
+						<h2>Web Standards e o Internet Explorer</h2>
+						<h3>Coisas que juntas não funcionam bem</h3>
+					</header>
+					<section>
+						<h4>Design atual</h4>
+						<img alt="#15" src="images/15.png" />
+					</section>
+
+					<section>
+						<h4>Problema</h4>
+						<p>
+							A imagem exibe esta página rodando no Internet Explorer 9( a versão mais recente é a 10, do Windows 8). É possível notar que o efeito do CSS3 da sombra no texto “Design ruim?” não é exibido. Esse tipo de problema tolhe o usuário de usufruir de alguns recursos disponíveis em sites Web.
+						</p>
+					</section>
+					<section>
+						<h4>Possível solução</h4>
+						<p>
+							A solução paliativa para exibir o recurso de sombra igualmente entre os navegadores é utilizar “filter: Shadow()”, recurso proprietário e fora do padrão Web. A solução definitiva é a utilização de navegadores com um suporte melhor às novas especificações, como: Mozilla Firefox, Google Chrome e o Opera.
+						</p>
+					</section>
+					<section>
+						<h4>Design final</h4>
+						<img alt="#15 fix" src="images/15.fix.png" />
+					</section>
+				</article>
+				<article id="16b">
+					<header>
+						<h2>Retornar ao ponto de partida</h2>
+						<h3>Coisas anatomicamente mal-projetadas</h3>
+					</header>
+					<section>
+						<h4>Design atual</h4>
+						<img alt="#16" src="images/16.png" />
+					</section>
+
+					<section>
+						<h4>Problema</h4>
+						<p>
+							O site apresenta a dificuldade de exibir o retorno à página inicial por falta de um botão início ou home. A tarefa de retornar ao início do site pode ser uma experiência cansativa e desconfortável.
+						</p>
+					</section>
+					<section>
+						<h4>Possível solução</h4>
+						<p>
+							A solução para este problema é adicionar um botão com um ícone de uma casa ou escrever “Home” ou “Início” no mesmo.
+						</p>
+					</section>
+					<section>
+						<h4>Design final</h4>
+						<img alt="#16 fix" src="images/16.fix.png" />
+					</section>
+				</article>
+				
+			</section>
+			<aside>
+				<nav>
+					<ul>
+						<li>
+							<a href="#13" class="active">#13</a>
+						</li>
+						<li>
+							<a href="#14">#14</a>
+						</li>
+						<li>
+							<a href="#15">#15</a>
+						</li>
+						<li>
+							<a href="#16">#16</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+		</div>
+		<footer>
+			<div>
+				<h4>Ihc - interface homem-computador</h4>
+				<h5>Bad Designs</h5>
+				<p>
+					<strong>Felipe Ralph</strong>,
+
+					<time datetime="2012-09-02T16:55:25Z">
+						02/09/2012
+					</time>
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

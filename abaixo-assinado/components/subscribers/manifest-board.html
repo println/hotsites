@@ -1,0 +1,48 @@
+<div id="list">
+    <div class="bar">
+        <h3>Assinantes</h3>
+        <!--<ul id="menu">
+            <li><span>Curso</span><span class="remove" title="Remover este filtro">X</span>
+                <ul>
+                    <li>Computação</li>
+                    <li>Administração</li>
+                    <li>Biologia</li>
+                    <li>Turismo</li>
+                </ul>
+            </li>
+            <li><span>Pólo</span><span class="remove" title="Remover este filtro">X</span>
+                <ul>
+                    <li>São Gonçalo</li>
+                    <li>Niterói</li>
+                    <li>Caxias</li>
+                    <li>Nova Iguaçu</li>
+                </ul>
+            </li>
+            <li><span>Ingresso</span>
+                <ul>
+                    <li>2009/1</li>
+                    <li>2009/2</li>
+                    <li>2010/1</li>
+                    <li>2011/1</li>
+                </ul>
+            </li>
+            <li class="button">Ir</li>
+        </ul>-->
+        <ul class="navi">
+            <li></li>
+        </ul>
+    </div>
+    <ul class="list">
+        <li v-for="subscriber in subscribers">
+            <span class="hash-number">#{{ subscriber.id }}</span>
+            <q>{{ subscriber.message }}</q>
+            <cite>{{ subscriber.name }} ({{ subscriber.nick }}) | {{ subscriber.course }} -
+                {{ subscriber['admissionDate'] }} | {{ subscriber.from }}</cite>
+        </li>
+    </ul>
+    <div class="bar">
+        <ul class="navi">
+            <li></li>
+        </ul>
+    </div>
+</div>

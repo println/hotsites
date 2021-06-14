@@ -1,0 +1,247 @@
+[
+  {
+    "name": "Angra dos Reis",
+    "local": "Polo Verolme",
+    "address": "Av. dos Trabalhadores 179, Jacuecanga, Angra dos Reis, RJ",
+    "phone": "(24) 3366-7128",
+    "email": "polo-angradosreis@cercierj.edu.br"
+  },
+  {
+    "name": "Barra do Piraí",
+    "local": "Polo CEDERJ – C.E. Nilo Peçanha",
+    "address": "Rua Antônio da Silva Brinco 1068, Oficinas Velhas – Barra do Piraí",
+    "phone": "(24) 2443-1956",
+    "email": "polo-barradopirai@cecierj.edu.br"
+  },
+  {
+    "name": "Belford Roxo",
+    "local": "Pólo Cederj",
+    "address": "Rua Mauá, s/n – São Bernardo",
+    "phone": "(21) 3771-2499",
+    "email": "polo-belfordroxo@cecierj.edu.br"
+  },
+  {
+    "name": "Bom Jesus do Itabapoana",
+    "local": "Colégio Estadual Padre Mello",
+    "address": "Avenida Governador Roberto Silveira 578, Centro, Bom Jesus do Itabapoana, RJ",
+    "phone": "(22) 3831-3803",
+    "email": "polo-bomjesusdoitabapoana@cecierj.edu.br"
+  },
+  {
+    "name": "Campo Grande",
+    "local": "Instituto de Educação Sara Kubitschek",
+    "address": "Av. Manoel Caldeira de Alvarenga 1.203, Campo Grande, Rio de Janeiro, RJ",
+    "phone": "(21) 2332-7581",
+    "email": "polo-campogrande@cecierj.edu.br"
+  },
+  {
+    "name": "Cantagalo",
+    "local": "Pólo Cederj",
+    "address": "Rua Coronel Manoel Marcelino de Paula 208, Centro, Cantagalo, RJ",
+    "phone": "(22) 2555-4786",
+    "email": "polo-cantagalo@cecierj.edu.br"
+  },
+  {
+    "name": "Duque de Caxias",
+    "local": "Pólo Cederj",
+    "address": "Rua Marechal Floriano 555, Jardim 25 de Agosto, Duque de Caxias, RJ",
+    "phone": "(21) 3657-3025",
+    "email": "polo-duquedecaxias@cecierj.edu.br"
+  },
+  {
+    "name": "Itaguai",
+    "local": "C. M. Senador Teotonio Vilela",
+    "address": "Rua Didimo José Batista 125, Centro, Itaguaí, RJ",
+    "phone": "(21) 2687-9223",
+    "email": "polo-itaguai@cecierj.edu.br"
+  },
+  {
+    "name": "Itaocara",
+    "local": "Escola Municipal Prof. Nildo Caruso Nara",
+    "address": "Rua Nilo Peçanha 471, Centro, Itaocara, RJ",
+    "phone": "(22) 3861-4844",
+    "email": "polo-itaocara@cecierj.edu.br"
+  },
+  {
+    "name": "Itaperuna",
+    "local": "CIEP 263 Lina Bo Bardi",
+    "address": "Av. Zulamith Bittencourt s/nº, Presidente Costa e Silva, Itaperuna, RJ",
+    "phone": "(22) 3822-4309",
+    "email": "polo-itaperuna@cecierj.edu.br"
+  },
+  {
+    "name": "Macaé",
+    "local": "UNED Macaé CEFET",
+    "address": "Rodovia Amaral Peixoto, Km 164, Imboacica, Macaé, RJ",
+    "phone": "(22) 3399-1504/1505",
+    "email": "polo-macae@cecierj.edu.br"
+  },
+  {
+    "name": "Magé",
+    "local": "E M Des. Oswaldo Portela",
+    "address": "Av. Padre Anchieta 163, Centro, Magé, RJ",
+    "phone": "(21) 2633-4015",
+    "email": "polo-mage@cecierj.edu.br"
+  },
+  {
+    "name": "Mesquita",
+    "local": "Centro Vocacional Tecnológico (CVT) – FAETEC",
+    "address": "Avenida Getúlio de Moura 1.282, Edson Passos, Mesquita",
+    "phone": "(21) 2797-9789",
+    "email": "polo-mesquita@cecierj.edu.br"
+  },
+  {
+    "name": "Miguel Pereira",
+    "local": "E M Profa. Adalice Soares",
+    "address": "Rua Luis Eugênio 61, Governador Portela, Miguel Pereira, RJ",
+    "phone": "(24) 2483-8463",
+    "email": "polo-miguelpereira@cecierj.edu.br"
+  },
+  {
+    "name": "Miracema",
+    "local": "Pólo Cederj",
+    "address": "Av. Deputado Luiz Fernando Linhares, s/n. Centro",
+    "phone": "(22) 3852-2349/2130",
+    "email": "polo-miracema@cecierj.edu.br"
+  },
+  {
+    "name": "Natividade",
+    "local": "Colégio Municipal Alvorada",
+    "address": "Rua Vigário João Batista 3, Centro, Natividade, RJ",
+    "phone": "(22) 3841-4080",
+    "email": "polo-natividade@cecierj.edu.br"
+  },
+  {
+    "name": "Niterói",
+    "local": "E. M. Paulo Freire",
+    "address": "Rua Soares Miranda 77, 5º andar, Fonseca, Niterói, RJ",
+    "phone": "(21) 2721-6678",
+    "email": "polo-niteroi@cecierj.edu.br"
+  },
+  {
+    "name": "Nova Friburgo",
+    "local": "CIEP 124 – Licinio Teixeira (Via Expressa)",
+    "address": "AV. José Pires Barroso, S/ Nº – Olaria- Nova Friburgo- RJ",
+    "phone": "(22) 2519-2043",
+    "email": "polo-novafriburgo@cecierj.edu.br"
+  },
+  {
+    "name": "Nova Iguaçu",
+    "local": "Polo CEDERJ (antigo Fórum)",
+    "address": "Rua Doutor Paulo Fróes Machado 38, Centro, Nova Iguaçu, RJ",
+    "phone": "(21) 2669-4811",
+    "email": "polo-novaiguacu@cecierj.edu.br"
+  },
+  {
+    "name": "Paracambi",
+    "local": "Centro Tecnológico Universitário de Paracambi",
+    "address": "Rua Sebastião de Lacerda s/nº Fábrica, Paracambi, RJ",
+    "phone": "(21) 3693-3299",
+    "email": "polo-paracambi@cecierj.edu.br"
+  },
+  {
+    "name": "Petrópolis",
+    "local": "Polo Cederj",
+    "address": "Estrada Machado Fagundes 326, Cascatinha, Petrópolis, RJ",
+    "phone": "(24) 2249-6981",
+    "email": "polo-petropolis@cecierj.edu.br"
+  },
+  {
+    "name": "Piraí",
+    "local": "Polo CEDERJ",
+    "address": "Rua Roberto Silveira 86, Centro, Piraí, RJ",
+    "phone": "(24) 2431-9782",
+    "email": "polo-pirai@cecierj.edu.br"
+  },
+  {
+    "name": "Resende",
+    "local": "Polo CEDERJ – UAB",
+    "address": "Av. Ten Cel Adalberto Mendes, nº 1920, Bairro Vila Santa Isabel, Resende – RJ",
+    "phone": "(24) 3381-2177",
+    "email": "polo-resende@cecierj.edu.br"
+  },
+  {
+    "name": "Rio Bonito",
+    "local": "Colégio Municipal Dr. Astério Alves de Mendonça",
+    "address": "Rodovia BR 101, km 265, Praça Cruzeiro, Rio Bonito, RJ",
+    "phone": "(21) 3634-4081",
+    "email": "polo-riobonito@cecierj.edu.br"
+  },
+  {
+    "name": "Rio das Flores",
+    "local": "Posto CEDERJ",
+    "address": "Rua Cel. Eurico de Castro 12, Centro, Rio das Flores, RJ",
+    "phone": "(24) 2458-1390",
+    "email": "polo-riodasflores@cecierj.edu.br"
+  },
+  {
+    "name": "Rocinha",
+    "local": "Complexo Esportivo da Rocinha",
+    "address": "Rua Bertha Lutz, 85. São Conrado, RJ",
+    "phone": "(21) 2334-7099/45",
+    "email": "polo-rocinha@cecierj.edu.br"
+  },
+  {
+    "name": "Santa Maria Madalena",
+    "local": "CIEP 273 ,Prof. Graciano ,Cariello Filho",
+    "address": "Rua Onório Dubois s/nº, Centro, Santa Maria Madalena, RJ",
+    "phone": "(22) 2561-3390",
+    "email": "polo-santamariamadalena@cecierj.edu.br"
+  },
+  {
+    "name": "São Fidélis",
+    "local": "CIEP 420, Joaquim Maia Brandão",
+    "address": "Rua Elysio da Costa Santos s/n, Dirley Perlingeiro de Abreu, São Fidélis, RJ",
+    "phone": "(22) 2758-1017",
+    "email": "polo-saofidelis@cecierj.edu.br"
+  },
+  {
+    "name": "São Francisco de Itabapoana",
+    "local": "CIEP 470 , Celso Martins Cordeiro",
+    "address": "Rua Antônio Pinheiro Filho 2, Centro, São Francisco de Itabapoana, RJ",
+    "phone": "(22) 2789-1530",
+    "email": "polo-saofrancisco@cecierj.edu.br"
+  },
+  {
+    "name": "São Gonçalo",
+    "local": "CIEP 250 Rozendo Rica Marcos",
+    "address": "Rua Visconde de Itaúna s/nº, Gradim, São Gonçalo, RJ",
+    "phone": "(21) 3709-3809",
+    "email": "polo-saogoncalo@cecierj.edu.br"
+  },
+  {
+    "name": "São Pedro da Aldeia",
+    "local": "Pólo Cederj",
+    "address": "Rua A, s/nº, Nova São Pedro da Aldeia, São Pedro da Aldeia, RJ",
+    "phone": "(22) 2627-2168",
+    "email": "polo-saopedrodaaldeia@cecierj.edu.br"
+  },
+  {
+    "name": "Saquarema",
+    "local": "Escola Municipal Edílson Vignoli Marins",
+    "address": "Rua Antonio Ferreira 110, Rio da Areia, Bacaxá, Saquarema, RJ",
+    "phone": "(22) 2655-4041/5381",
+    "email": "polo-saquarema@cecierj.edu.br"
+  },
+  {
+    "name": "Teresópolis",
+    "local": "Campus Uerj Teresópolis",
+    "address": "Av. Lúcio Meira, 233, Várzea (Centro), Teresópolis, RJ",
+    "phone": "(21) 3641-0846",
+    "email": "polo-teresopolis@cecierj.edu.br"
+  },
+  {
+    "name": "Três Rios",
+    "local": "Escola Municipal Walter Franklin",
+    "address": "Rua Marechal Deodoro 117, Centro, Três Rios, RJ",
+    "phone": "(24) 2255-3071",
+    "email": "polo-tresrios@cecierj.edu.br"
+  },
+  {
+    "name": "Volta Redonda",
+    "local": "Polo Prof. Darcy Ribeiro",
+    "address": "Rua 539 s/nº, Jardim Paraíba, Volta Redonda, RJ",
+    "phone": "(24) 3337-4805",
+    "email": "polo-voltaredonda@cecierj.edu.br"
+  }
+]
