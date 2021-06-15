@@ -15,7 +15,7 @@ Foi um hotsite para colher assinaturas na época da graduação.
 1. php no backend -> removido 
 
 ## Bad design (2012)
-Durante o curso de IHC(interface homem computador) foi necessário aprensentar alguns conceitos utilizando exemplos e utilizando html. Como considero essa tarefa tem um design interessante, coloquei aqui.
+Durante o curso de IHC(interface homem computador) foi necessário aprensentar alguns conceitos utilizando html. Considerando o design da tarefa interessante, coloquei-a aqui.
 
 ### Tecnologias
 1. html5
@@ -23,7 +23,7 @@ Durante o curso de IHC(interface homem computador) foi necessário aprensentar a
 1. css
 
 ## Constrular (2014)
-Divigulação para comércio de material de construção.
+Divigulação para comércio de material de construção local.
 
 ### Tecnologias
 1. html5

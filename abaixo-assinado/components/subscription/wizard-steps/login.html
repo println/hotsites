@@ -3,7 +3,7 @@
     <form @submit.prevent="formSubmit()"><!--container 3 + dados ajax-->
         <fieldset class="container">
             <legend>Validação</legend>
-            <p class="text">Utilize seu login da plataforma para a verificação de atividade acadêmica</p>
+            <p class="text">Utilize <s>seu login da plataforma</s> para a verificação <s>de atividade acadêmica</s></p>
             <div class="form-field">
                 <div class="field">
                     <label class="label" for="mat">Matrícula:</label>
@@ -25,7 +25,8 @@
             </div>
             <p class="text">
                 <a id="lnkpriv" href="#privacidade" title="Veja abaixo sobre a privacidade">
-                    Leia sobre a privacidade antes de verificar
+                    Clique em <u><b>Verificar</b> para modificar a mensagem</u> da primeira assinatura<br>
+                    ou <u><b>altere a matrícula</b> para criar uma nova</u> assinatura
                 </a>
             </p>
             <button type="submit">Verificar</button>

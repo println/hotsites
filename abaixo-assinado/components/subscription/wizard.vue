@@ -40,18 +40,18 @@ export default {
     isCreating() {
       return this.state.stage == 'create'
     },
-    isFinished(){
+    isFinished() {
       return this.state.stage == 'terminate'
     },
-    onEdit(value){
-      this.subscriber = Object.assign({},findSubscriberById(this.subscribers, value.id))
+    onEdit(value) {
+      this.subscriber = Object.assign({}, findSubscriberById(this.subscribers, value.id))
       this.edit()
     },
-    onNew(value){
+    onNew(value) {
       this.subscriber = value
       this.create()
     },
-    onCreate(subscriber){
+    onCreate(subscriber) {
       let newSubscriber = {}
 
       newSubscriber.id = this.subscribers[0].id + 1
@@ -71,10 +71,10 @@ export default {
       this.subscriber = this.subscribers[0]
       this.terminate()
     },
-    onUpdate(subscriber){
+    onUpdate(subscriber) {
       let index = findIndexById(this.subscribers, subscriber.id)
 
-      if(!this.subscribers[index].updateCredits){
+      if (!this.subscribers[index].updateCredits || this.subscribers[index].message == subscriber.message) {
         this.subscriber = this.subscribers[index]
         this.terminate()
         return
