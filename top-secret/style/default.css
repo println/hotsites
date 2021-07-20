@@ -1,0 +1,26 @@
+::selection {
+    color: white;
+    background: #6f42c1;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+html {
+    align-items: center;
+}
+
+body {
+    margin: 0 auto 0 auto !important;
+}
+
+#app.container {
+    flex: 1;
+    display: flex;
+}

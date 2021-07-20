@@ -33,3 +33,15 @@ Este trabalho foi para a divulgação de um comércio familiar com o tema materi
 1. css/less
 1. suporte responsivo para mobile
 
+## [Top-secret (WIP)](https://println.github.io/hotsites/top-secret/)
+Experimento com criptografia, svg e Vue. Funcional, mas ainda em construção.
+
+### Tecnologias
+1. Vue 3
+   1. Vuex (store)
+   1. Sfc-loader (jit)
+1. Cleavejs (validação formulário)
+1. Axios (cliente http)
+1. Cryptojs (criptografia aes)  
+1. Bootstrap 5
+
