@@ -40,6 +40,7 @@ Experimento com criptografia, svg e Vue. Funcional, mas ainda em construção.
 1. Vue 3
    1. Vuex (store)
    1. Sfc-loader (jit)
+   1. Vue Toast Notification
 1. Cleavejs (validação formulário)
 1. Axios (cliente http)
 1. Cryptojs (criptografia aes)  

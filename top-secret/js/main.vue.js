@@ -1,3 +1,5 @@
+
+
 const app = Vue.createApp({
     mounted() {
         this.$store.dispatch("loadEncryptedMessage");
@@ -7,4 +9,6 @@ const app = Vue.createApp({
     }
 });
 
-app.use(store).mount('#app');
+store.$app = app.use(VueToast, {position: 'top'}).use(store).mount('#app');
+
+

@@ -1,5 +1,5 @@
 <template>
-  <aside class="card">
+  <aside class="card" :class="{ 'disabled': isDisabled }">
     <div class="card-body">
       <h5 class="card-title">Decifrar mensagem</h5>
       <section>
@@ -7,11 +7,9 @@
           <label class="form-label" for="compoundName">Seu nome composto</label>
           <div class="input-group">
             <input class="form-control" :class="{ 'is-valid': isCompoundNameValid }" type="text" id="compoundName"
-                   ref="compoundName" v-model="compoundName"
-                   name="compoundName"
-                   :maxlength="compoundNameMaxLength" autofocus placeholder="Ex: Ana Júlia" v-on:keyup="validate"
-                   pattern="[a-zA-Z\s]+" required autocomplete="off"/>
-
+                   ref="compoundName" v-model="compoundName" name="compoundName" :maxlength="compoundNameMaxLength"
+                   autofocus placeholder="Ex: Ana Júlia" @keyup="validate" @keypress="validate" pattern="[\w\s]+"
+                   required autocomplete="off" :disabled="isDisabled"/>
             <span class="input-group-text">{{
                 (compoundNameMaxLength - compoundName.length).toLocaleString('en-US', {
                   minimumIntegerDigits: 2,
@@ -25,12 +23,10 @@
           <label class="form-label" for="birth">Dia e mês do seu aniversário</label>
           <div class="input-group">
             <input class="form-control" :class="{ 'is-valid': isBirthValid }" type="text" id="birth" ref="birth"
-                   v-model="birth" name="birth"
-                   :maxlength="birthMaxLength"
-                   v-on:keyup="validate" v-cleave="{date: true, datePattern: ['d', 'm'], delimiter: '/'}"
-                   placeholder="Ex: 07/05" pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))$"
-                   required autocomplete="off">
-
+                   v-model="birth" name="birth" :maxlength="birthMaxLength" @keyup="validate" @keypress="validate"
+                   v-cleave="{date: true, datePattern: ['d', 'm'], delimiter: '/'}" placeholder="Ex: 07/05"
+                   pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))$" required autocomplete="off"
+                   :disabled="isDisabled">
             <span class="input-group-text">{{
                 (birthMaxLength - birth.length).toLocaleString('en-US', {
                   minimumIntegerDigits: 2,
@@ -44,7 +40,7 @@
                   :disabled="!canTryDecode">
             Decifrar
           </button>
-          <div>
+        </div>
       </section>
     </div>
   </aside>
@@ -68,6 +64,9 @@ export default {
     },
     secretMessage() {
       return this.$store.state.secretMessage;
+    },
+    isDisabled() {
+      return this.secretMessage;
     }
   },
   data() {
@@ -89,13 +88,16 @@ export default {
       }
     },
     tryDecode() {
-      const password = this.compoundName.toLocaleLowerCase() + this.birth.replace('/', '');
-      this.$store.dispatch("decryptMessage", password);
-
-      this.compoundName = '';
-      this.birth = '';
-      document.getElementById("birth").cleave.setRawValue('');
-      document.getElementById("compoundName").value = '';
+      this.$store.dispatch("decryptMessage", {name: this.compoundName, birth: this.birth}).then(() => {
+        this.compoundName = '';
+        this.birth = '';
+        document.getElementById("birth").cleave.setRawValue('');
+        document.getElementById("compoundName").value = '';
+        this.$refs.decode.blur();
+        this.$toast.success("A mensagem foi decifrada! 🙌");
+      }, () => {
+        this.$toast.error("Dados incorretos! 😞");
+      });
     }
   },
   directives: {
@@ -119,6 +121,10 @@ export default {
 .card {
   height: min-content;
   width: 18rem;
+}
+
+.card.disabled {
+  opacity: 0.5;
 }
 
 input[type=text] {
