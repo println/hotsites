@@ -7,8 +7,8 @@
           <label class="form-label" for="compoundName">Seu nome composto</label>
           <div class="input-group">
             <input class="form-control" :class="{ 'is-valid': isCompoundNameValid }" type="text" id="compoundName"
-                   ref="compoundName" v-model="compoundName" name="compoundName" :maxlength="compoundNameMaxLength"
-                   autofocus placeholder="Ex: Ana Júlia" @keyup="validate" @keypress="validate" pattern="[\w\s]+"
+                   ref="compoundName" :value="compoundName" name="compoundName" :maxlength="compoundNameMaxLength"
+                   autofocus placeholder="Ex: Ana Júlia" @input="onInput" pattern="[\w\s]+"
                    required autocomplete="off" :disabled="isDisabled"/>
             <span class="input-group-text">{{
                 (compoundNameMaxLength - compoundName.length).toLocaleString('en-US', {
@@ -23,7 +23,7 @@
           <label class="form-label" for="birth">Dia e mês do seu aniversário</label>
           <div class="input-group">
             <input class="form-control" :class="{ 'is-valid': isBirthValid }" type="text" id="birth" ref="birth"
-                   v-model="birth" name="birth" :maxlength="birthMaxLength" @keyup="validate" @keypress="validate"
+                   :value="birth" name="birth" :maxlength="birthMaxLength" @input="onInput"
                    v-cleave="{date: true, datePattern: ['d', 'm'], delimiter: '/'}" placeholder="Ex: 07/05"
                    pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))$" required autocomplete="off"
                    :disabled="isDisabled">
@@ -78,6 +78,18 @@ export default {
     };
   },
   methods: {
+    onInput(e) {
+      if (e.target == this.$refs.compoundName) {
+        this.compoundName = e.target.value;
+      }
+      if (e.target == this.$refs.birth) {
+        this.birth = e.target.value;
+      }
+      let self = this;
+      setTimeout(function () {
+        self.validate();
+      }, 100);
+    },
     validate() {
       if (this.isCompoundNameValid && !this.isBirthValid) {
         this.$refs.birth.focus();
