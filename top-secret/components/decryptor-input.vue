@@ -23,7 +23,7 @@
           <label class="form-label" for="birth">Dia e mês do seu aniversário</label>
           <div class="input-group">
             <input class="form-control" :class="{ 'is-valid': isBirthValid }" type="text" id="birth" ref="birth"
-                   :value="birth" name="birth" :maxlength="birthMaxLength" @input="onInputBirth"
+                   :value="birth" name="birth" :maxlength="birthMaxLength" @input="onInputBirth" inputmode="numeric"
                    v-cleave="{date: true, datePattern: ['d', 'm'], delimiter: '/'}" placeholder="Ex: 07/05"
                    pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))$" required autocomplete="off"
                    :disabled="isDisabled">
