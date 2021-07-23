@@ -8,7 +8,7 @@
           <div class="input-group">
             <input class="form-control" :class="{ 'is-valid': isCompoundNameValid }" type="text" id="compoundName"
                    ref="compoundName" :value="compoundName" name="compoundName" :maxlength="compoundNameMaxLength"
-                   autofocus placeholder="Ex: Ana Júlia" @input="onInput" pattern="[\w\s]+"
+                   autofocus placeholder="Ex: Ana Júlia" @input="onInputCompoundName" pattern="[\w\s]+"
                    required autocomplete="off" :disabled="isDisabled"/>
             <span class="input-group-text">{{
                 (compoundNameMaxLength - compoundName.length).toLocaleString('en-US', {
@@ -23,7 +23,7 @@
           <label class="form-label" for="birth">Dia e mês do seu aniversário</label>
           <div class="input-group">
             <input class="form-control" :class="{ 'is-valid': isBirthValid }" type="text" id="birth" ref="birth"
-                   :value="birth" name="birth" :maxlength="birthMaxLength" @input="onInput"
+                   :value="birth" name="birth" :maxlength="birthMaxLength" @input="onInputBirth"
                    v-cleave="{date: true, datePattern: ['d', 'm'], delimiter: '/'}" placeholder="Ex: 07/05"
                    pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))$" required autocomplete="off"
                    :disabled="isDisabled">
@@ -77,26 +77,26 @@ export default {
       birthMaxLength: 5
     };
   },
+  mounted() {
+    this.$nextTick(() => {
+      this.$refs.compoundName.focus();
+    });
+  },
   methods: {
-    onInput(e) {
-      if (e.target == this.$refs.compoundName) {
-        this.compoundName = e.target.value;
+    onInputCompoundName(e) {
+      this.compoundName = e.target.value;
+      if (this.isCompoundNameValid) {
+        this.$nextTick(() => {
+          this.$refs.birth.focus();
+        });
       }
-      if (e.target == this.$refs.birth) {
-        this.birth = e.target.value;
-      }
-      let self = this;
-      setTimeout(function () {
-        self.validate();
-      }, 100);
     },
-    validate() {
-      if (this.isCompoundNameValid && !this.isBirthValid) {
-        this.$refs.birth.focus();
-        return;
-      }
+    onInputBirth(e) {
+      this.birth = e.target.value;
       if (this.isBirthValid) {
-        this.$refs.decode.focus();
+        this.$nextTick(() => {
+          this.$refs.decode.focus();
+        });
       }
     },
     tryDecode() {
