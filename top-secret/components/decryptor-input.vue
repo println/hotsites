@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="d-grid gap-2">
-          <button class="btn btn-outline-primary" type="submit" ref="decode" @click="tryDecode"
+          <button class="btn btn-primary" type="submit" ref="decode" @click="tryDecode"
                   :disabled="!canTryDecode">
             Decifrar
           </button>
@@ -141,5 +141,15 @@ export default {
 
 input[type=text] {
   text-transform: capitalize;
+}
+
+@media all and (orientation: portrait) {
+  .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .card.disabled {
+    display: none;
+  }
 }
 </style>

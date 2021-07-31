@@ -6,6 +6,7 @@
     <link href="style/bootstrap.min.css" rel="stylesheet">
     <link href="style/theme-sugar.css" rel="stylesheet">
     <link href="style/default.css" title="Default" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="style/bootstrap-color-overwrite.css" title="Default" type="text/css" rel="stylesheet" media="screen"/>
     <script src="js/lib/axios.min.js"></script>
     <script src="js/lib/vue.global.prod.js"></script>
     <script src="js/lib/vuex.global.prod.js"></script>
@@ -17,12 +18,14 @@
     <script src="js/sfc-loader.config.js"></script>
     <script src="js/store.js"></script>
     <script src="js/main.vue.js" defer></script>
+    <meta name="theme-color" content="#9000B7" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body class="container">
-<header class="container">
-    <h1 class="lead display-5">Mensagem Secreta</h1>
+<header class="mt-3 mb-3 ">
+    <h1 class="lead display-5 text-center">Mensagem Secreta</h1>
 </header>
-<div id="app" class="container">
+<div id="app">
     <app></app>
 </div>
 </body>

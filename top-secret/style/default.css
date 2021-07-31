@@ -1,6 +1,15 @@
-::selection {
-    color: white;
-    background: #6f42c1;
+:root {
+    --slate-blue: #A9B5D9;
+    --clementine: #F2A477;
+    --red-orange: #F29472;
+    --baby-pink: #F2C4C4;
+    --light-silver: #F2F2F2;
+
+    --bg-color: var(--light-silver);
+    --fg-color: var(--clementine);
+
+    --bg-dark-color: var(--red-orange);
+    --fg-dark-color: var(--baby-pink);
 }
 
 html, body {

@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div class="jumbotron p-5 mb-4 bg-light rounded-3">
+    <div class="jumbotron p-5 rounded-3">
       <div class="container-fluid">
         <paper></paper>
       </div>
@@ -28,6 +28,17 @@ export default {
 
 .jumbotron {
   margin-right: 10px;
+  margin-bottom: 10px;
   flex: 1;
+}
+
+@media all and (orientation: portrait) {
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .jumbotron {
+    margin-right: 0;
+  }
 }
 </style>
